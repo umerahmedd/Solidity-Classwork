@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/sample.sol": "ownab"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/sample.sol": {
+			"keccak256": "0x2a9b9f3ff0322b81bd896f12f5b5dfecffb924bce616880c692fb8d38eb41871",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bb9da09803f625bbb37774e38734cc0cc0cc528fddc1e25686d79c1dffc7341c",
+				"dweb:/ipfs/QmZ2XibugQNfE2KbMkvB65VT1jdshi6VZNi4rcAEiV6PZw"
+			]
+		}
+	},
+	"version": 1
+}
