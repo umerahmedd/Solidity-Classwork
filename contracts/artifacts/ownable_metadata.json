@@ -12,6 +12,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "loop",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -21,6 +34,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "setOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -52,11 +78,11 @@
 	},
 	"sources": {
 		"contracts/sample.sol": {
-			"keccak256": "0xfaeb66c5c79e2534ab9253a3d721bee02cde5be1917b1599ac531ca2710e4c06",
+			"keccak256": "0x49abdf947a3403103a543dec9659aa1acd2c3e0503df0aa23ca23ab13fa26352",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://92c3c162f3f11ef3b7cf6c50147e13c8921bef71edf6959d03fe50309a1de2ed",
-				"dweb:/ipfs/QmPu4hFsJcNYKKPse66Jx2aYfHXk76ZgZLejTS6p8vSg1K"
+				"bzz-raw://d1befbfc3de5d98c2690dd8d71aec03aee5f26913b4d18a31f4d388528859b36",
+				"dweb:/ipfs/QmUZgwQNKQXcvME1cUEm2jmCRHgTGD9XgozW1XTTH5QDtJ"
 			]
 		}
 	},
