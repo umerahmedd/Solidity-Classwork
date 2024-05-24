@@ -170,7 +170,7 @@
 				"name": "getStatus",
 				"outputs": [
 					{
-						"internalType": "enum ownable.Status",
+						"internalType": "enum Practi.Status",
 						"name": "",
 						"type": "uint8"
 					}
@@ -247,7 +247,7 @@
 			{
 				"inputs": [
 					{
-						"internalType": "enum ownable.Status",
+						"internalType": "enum Practi.Status",
 						"name": "_status",
 						"type": "uint8"
 					}
@@ -278,7 +278,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/sample.sol": "ownable"
+			"contracts/sample.sol": "Practi"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -293,11 +293,11 @@
 	},
 	"sources": {
 		"contracts/sample.sol": {
-			"keccak256": "0x4fe9c5af0577aa43f20225ddbf30aabc642926e5711e86fd28bccfeb0515e315",
+			"keccak256": "0x597a3feb66cab8140b94a0956f31ec17dc31cf449ad9ae0433dfc87f006c0189",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://5ea7a50f46067fbccb00649b88d26f8ad22fe9b334e08a0e1817841a550c7f49",
-				"dweb:/ipfs/QmQXXy1WFo9vPTjhN3sC63QRzTnZxTWgYDbaG7n8zEX1KC"
+				"bzz-raw://dfb95811e0109cffb9557f79a0faaaf416e09f0c4d031356a6da750e7a9457bd",
+				"dweb:/ipfs/QmSqA6ffHLF8gF3zsUJg5jyfs9UVDrwdD85e8E7MHu6o47"
 			]
 		}
 	},
