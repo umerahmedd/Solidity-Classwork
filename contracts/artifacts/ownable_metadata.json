@@ -11,6 +11,83 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "arr",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "arr2",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "array",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_x",
+						"type": "uint256"
+					}
+				],
+				"name": "arrayWithLoop",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "createArray",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "loop",
 				"outputs": [
@@ -31,6 +108,19 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "returnArray",
+				"outputs": [
+					{
+						"internalType": "uint256[5]",
+						"name": "",
+						"type": "uint256[5]"
 					}
 				],
 				"stateMutability": "view",
@@ -78,11 +168,11 @@
 	},
 	"sources": {
 		"contracts/sample.sol": {
-			"keccak256": "0x49abdf947a3403103a543dec9659aa1acd2c3e0503df0aa23ca23ab13fa26352",
+			"keccak256": "0x162e9c67bbfbbd06a2a0d13b2084ff02f8d6241d5c7f87c94bbbbea599085e2f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d1befbfc3de5d98c2690dd8d71aec03aee5f26913b4d18a31f4d388528859b36",
-				"dweb:/ipfs/QmUZgwQNKQXcvME1cUEm2jmCRHgTGD9XgozW1XTTH5QDtJ"
+				"bzz-raw://953bc06193c158783d8aaa836cf38afaa011257480e5fa384b83e3731ca85d32",
+				"dweb:/ipfs/QmTdGXHBsuj9cC6HCq5o1sGpWj721A9kuUy86KT3rGQnG7"
 			]
 		}
 	},
