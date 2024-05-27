@@ -6,42 +6,69 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "acc",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "balance",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "chat",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "_to",
 						"type": "address"
-					}
-				],
-				"name": "acc_info",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "age",
-						"type": "uint256"
 					},
 					{
 						"internalType": "string",
-						"name": "add",
+						"name": "_message",
 						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "don",
-						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "delete_info",
+				"name": "sendMessage",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -49,27 +76,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					},
-					{
 						"internalType": "uint256",
-						"name": "_age",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "_add",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_don",
+						"name": "_val",
 						"type": "uint256"
 					}
 				],
-				"name": "set",
+				"name": "setData",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -88,7 +100,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Practice.sol": "AdvancedMapping"
+			"contracts/Practice.sol": "Events"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

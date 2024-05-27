@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Practice.sol": "ChatApp"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Practice.sol": {
+			"keccak256": "0xb81de9d1c6c8bbbac9879124f1d9a97bce428877739c5da54629f43c9ce5dca7",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://045a4dafdc018b0c8999e790d6c925dda110589f0723949c5b5c939a4357fea5",
+				"dweb:/ipfs/QmZdaWQ2T6tRJMUhPmycUtze2HH65NqAuTYoDW3FHVaJfR"
+			]
+		}
+	},
+	"version": 1
+}

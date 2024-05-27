@@ -194,18 +194,43 @@ contract BasicMapping {
 contract AdvancedMapping {
     struct donor_dts {
         string name;
-        uint age;
+        uint256 age;
         string add;
-        uint don;
+        uint256 don;
     }
 
     mapping(address => donor_dts) public acc_info;
 
-    function set(string memory _name, uint _age, string memory _add, uint _don) public {
-        acc_info[msg.sender] = donor_dts(_name, _age, _add, acc_info[msg.sender].don + _don);
-    } 
+    function set(
+        string memory _name,
+        uint256 _age,
+        string memory _add,
+        uint256 _don
+    ) public {
+        acc_info[msg.sender] = donor_dts(
+            _name,
+            _age,
+            _add,
+            acc_info[msg.sender].don + _don
+        );
+    }
 
     function delete_info() public {
         delete acc_info[msg.sender];
     }
 }
+
+contract Events {
+    event balance(address acc, string message, uint256 value);
+
+    function setData(uint256 _val) public {
+        emit balance(msg.sender, "Has value", _val);
+    }
+
+    event chat(address indexed from, address to, string message);
+
+    function sendMessage(address _to, string memory _message) public {
+        emit chat(msg.sender, _to, _message);
+    }
+}
+
