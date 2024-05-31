@@ -6,14 +6,34 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
 				"inputs": [
 					{
+						"indexed": false,
 						"internalType": "uint256",
-						"name": "",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
-				"name": "dynamicArr",
+				"name": "log",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "call",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkBalanc",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -25,11 +45,34 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "dynamicArray",
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "send",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -45,7 +88,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Practice.sol": "DynamicArrays"
+			"contracts/Practice.sol": "SendETH"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

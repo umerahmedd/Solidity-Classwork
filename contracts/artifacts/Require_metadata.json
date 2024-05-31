@@ -6,14 +6,8 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "dynamicArr",
+				"inputs": [],
+				"name": "age",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -25,10 +19,36 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "dynamicArray",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					}
+				],
+				"name": "checkRequire",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "onlyOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -45,7 +65,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Practice.sol": "DynamicArrays"
+			"contracts/Practice.sol": "Require"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

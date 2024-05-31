@@ -6,14 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "dynamicArr",
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "checkBal",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -26,9 +25,22 @@
 			},
 			{
 				"inputs": [],
-				"name": "dynamicArray",
+				"name": "getETH",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -45,7 +57,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Practice.sol": "DynamicArrays"
+			"contracts/Practice.sol": "Payable"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},

@@ -234,3 +234,180 @@ contract Events {
     }
 }
 
+contract Require {
+    address public owner = msg.sender;
+    uint256 public age = 25;
+
+    function checkRequire(uint256 x) public {
+        age = age + 5;
+        require(x > 2, "value of x is less than 2");
+    }
+
+    function onlyOwner() public {
+        require(owner == msg.sender, "You are not the owner");
+        age = age - 2;
+    }
+}
+
+contract Modifiers {
+    modifier sameCode() {
+        for (uint256 i = 0; i < 10; i++) {
+            //code
+        }
+        _;
+        //code
+    }
+
+    function fun1() public pure sameCode returns (string memory) {
+        return "fun1 says hi";
+    }
+
+    function fun2() public pure sameCode returns (uint256 x) {
+        x = 20; // this also returns x
+    }
+
+    function fun3() public view sameCode returns (address) {
+        return msg.sender;
+    }
+}
+
+contract Payable {
+    address payable public owner = payable(msg.sender);
+
+    constructor() payable {}
+
+    function getETH() public payable {}
+
+    function checkBal() public view returns (uint256) {
+        return address(this).balance;
+    }
+}
+
+contract Fallback_Receive {
+    fallback() external payable {
+        // Receives data + ethers
+    }
+
+    receive() external payable {
+        // Receives only ethers
+    }
+
+    function checkBal() public view returns (uint256) {
+        return address(this).balance;
+    }
+}
+
+contract SendETH {
+    //address payable public getter = payable(0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2);
+
+    receive() external payable {}
+
+    function checkBalanc() public view returns (uint256) {
+        return address(this).balance;
+    }
+
+    event log(uint value);
+
+    function send(address payable _address) public payable {
+
+        emit log(msg.value);
+
+        bool sent = _address.send(msg.value);
+        require(sent, "Transaction Failed!");
+    }
+
+    function transfer(address payable _address) public payable {
+        _address.transfer(msg.value);
+    }
+
+    function call(address payable _address) public {
+        (bool sent, ) = _address.call{value: 1 ether}("");
+        require(sent, "Transaction Failed!");
+    }
+}
+
+
+contract NFTMarketplace {
+    // Basic structure to represent an NFT
+    struct NFT {
+        uint256 tokenId;
+        address owner;
+        string tokenURI;
+    }
+
+    // Structure to represent an NFT listing
+    struct Listing {
+        uint256 tokenId;
+        address payable seller;
+        uint256 price;
+        bool sold;
+    }
+
+    // Mapping from tokenId to NFT details
+    mapping(uint256 => NFT) public nfts;
+    
+    // Mapping from tokenId to its listing
+    mapping(uint256 => Listing) public listings;
+
+    // Counter for token IDs
+    uint256 private _tokenIdCounter;
+
+    // Events to notify when an NFT is minted, listed, or sold
+    event NFTMinted(uint256 indexed tokenId, address owner, string tokenURI);
+    event NFTListed(uint256 indexed tokenId, address seller, uint256 price);
+    event NFTSold(uint256 indexed tokenId, address buyer, uint256 price);
+
+    // Function to mint a new NFT
+    function mintNFT(string memory tokenURI) public {
+        uint256 tokenId = _tokenIdCounter;
+        nfts[tokenId] = NFT({
+            tokenId: tokenId,
+            owner: msg.sender,
+            tokenURI: tokenURI
+        });
+        _tokenIdCounter += 1;
+
+        emit NFTMinted(tokenId, msg.sender, tokenURI);
+    }
+
+    // Function to list an NFT for sale
+    function listNFT(uint256 tokenId, uint256 price) public {
+        require(nfts[tokenId].owner == msg.sender, "Only the owner can list this NFT");
+        require(price > 0, "Price must be greater than zero");
+
+        listings[tokenId] = Listing({
+            tokenId: tokenId,
+            seller: payable(msg.sender),
+            price: price,
+            sold: false
+        });
+
+        emit NFTListed(tokenId, msg.sender, price);
+    }
+
+    // Function to buy a listed NFT
+    function buyNFT(uint256 tokenId) public payable {
+        Listing storage listing = listings[tokenId];
+        require(listing.price > 0, "This NFT is not for sale");
+        require(msg.value == listing.price, "Incorrect value sent");
+        require(!listing.sold, "This NFT is already sold");
+
+        listing.sold = true;
+
+        // Transfer ownership of the NFT
+        nfts[tokenId].owner = msg.sender;
+
+        // Transfer the sale amount to the seller
+        listing.seller.transfer(msg.value);
+
+        emit NFTSold(tokenId, msg.sender, listing.price);
+    }
+
+    // Function to cancel an NFT listing
+    function cancelListing(uint256 tokenId) public {
+        require(nfts[tokenId].owner == msg.sender, "Only the owner can cancel this listing");
+        require(listings[tokenId].price > 0, "This NFT is not listed");
+
+        delete listings[tokenId];
+    }
+}

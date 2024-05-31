@@ -168,11 +168,11 @@
 	},
 	"sources": {
 		"contracts/Practice.sol": {
-			"keccak256": "0x282eb11d679f77d73e95c3f5455d6eda54de86f95a2123c8c70e9c33b6d7c837",
+			"keccak256": "0x3d6919401f9fb84f3553c64c3b03120cf48b3336716d393d83b69caf3e93400e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://2e4a7d6f348973d8eabb25a03c40fa5ccbc8754b5fb6b673023b5cefece8765b",
-				"dweb:/ipfs/QmepuNfNx4ZfK96ox5EBZmMm4DjY9nP71HdCDTL4tpespC"
+				"bzz-raw://8d4adc7176b8159cf4fb433b76c3103cf28ce02264e1e553f0a705b4478b982d",
+				"dweb:/ipfs/QmesqXi8C9RNJP2MMdw2sruLyTvhFx3qQgHsoAbPKPLDCU"
 			]
 		}
 	},

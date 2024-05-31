@@ -6,54 +6,51 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "emp_id",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					}
-				],
-				"name": "getId",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "setIds",
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
 		"devdoc": {
+			"custom:dev-run-script": "./scripts/deploy_with_ethers.ts",
+			"details": "Store & retrieve value in a variable",
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"retrieve()": {
+					"details": "Return value ",
+					"returns": {
+						"_0": "value of 'number'"
+					}
+				},
+				"store(uint256)": {
+					"details": "Store value in variable",
+					"params": {
+						"num": "value to store"
+					}
+				}
+			},
+			"title": "Storage",
 			"version": 1
 		},
 		"userdoc": {
@@ -64,7 +61,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Practice.sol": "BasicMapping"
+			"contracts/1_Storage.sol": "Storage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -78,12 +75,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Practice.sol": {
-			"keccak256": "0x3d6919401f9fb84f3553c64c3b03120cf48b3336716d393d83b69caf3e93400e",
+		"contracts/1_Storage.sol": {
+			"keccak256": "0xa3de51030e5784d1fc25677298a0bd61bf7eac541ca2fc94232f1b7dc5a89e21",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://8d4adc7176b8159cf4fb433b76c3103cf28ce02264e1e553f0a705b4478b982d",
-				"dweb:/ipfs/QmesqXi8C9RNJP2MMdw2sruLyTvhFx3qQgHsoAbPKPLDCU"
+				"bzz-raw://aac95d61b7ce356e2da8d93eb66abfabbeadebb4f44d3d78fd14414e7ac918ba",
+				"dweb:/ipfs/QmZ6otiNvDfrWzEiQJBAdWUurwEvsemrbBZgD9hj6qSki1"
 			]
 		}
 	},

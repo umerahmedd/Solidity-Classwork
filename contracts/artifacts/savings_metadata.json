@@ -6,21 +6,42 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "inc",
+				"type": "event"
 			},
 			{
 				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -37,7 +58,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/sample.sol": "savings"
+			"contracts/Savings.sol": "savings"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -51,12 +72,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/sample.sol": {
-			"keccak256": "0xe1a8606f49ac36cd3ce05ee47a78e0d8d2930d2cb2961f9173079762c99d0c85",
+		"contracts/Savings.sol": {
+			"keccak256": "0xd9b06e47c18c4af6f6ba12111dca9a22a51a42e95d87a74d721f7fde2bd55a2b",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://3aed832c4aa393b7c1921247c10a62cc57b6e03338a77c3ad6c97da60bd154cc",
-				"dweb:/ipfs/QmWhUTr4XiBUEyUoqz7k46uWj4idkYtbYvQR1XhNmpwikn"
+				"bzz-raw://e6e9c8e4aa851011f9e1356f5e843c5c32199d5421cfe26a649b3b0e1a957f91",
+				"dweb:/ipfs/QmVVpKZ2pV3vHiewR5EUfuP5s3PUHndEu9cAZYRqkGAURk"
 			]
 		}
 	},
